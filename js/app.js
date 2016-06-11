@@ -44,12 +44,9 @@ $(document).ready(function() {
     $('#main').append(catShowReady);
   };
   $('.cat').click( function(event) {
-    console.log("click!")
     var number, count;
-    number = $("#" + event.target.id).find('.number')
-    console.log(number)
+    number = $(event.currentTarget).find('.number')
     count = number.text();
-    console.log(count)
     inc = parseInt(count) + 1;
     number.text(inc);
   });
