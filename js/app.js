@@ -90,9 +90,9 @@ var catView = {
 
     $('#admin-submit').on('click', function(e) {
       e.preventDefault()
-      var name = $('#admin-name').val();
-      var url = $('#admin-url').val();
-      var count = $('#admin-count').val();
+      var name = $('#admin-name').val().text();
+      var url = $('#admin-url').val().text();
+      var count = $('#admin-count').val().text();
       octopus.updateCat(name, url, count);
     });
 
@@ -105,9 +105,9 @@ var catView = {
     $(this.catCount).text(currentCat.count);
     $(this.catImg).attr('src', currentCat.pic);
     $(function() {
-      $('#admin-name').val(currentCat.name);
-      $('#admin-url').val(currentCat.pic);
-      $('#admin-count').val(currentCat.count);
+      $('#admin-name').val(currentCat.name).text();
+      $('#admin-url').val(currentCat.pic).text();
+      $('#admin-count').val(currentCat.count).text();
     });
   }
 };
