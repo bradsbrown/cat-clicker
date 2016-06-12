@@ -5,8 +5,8 @@
   <title>Cat Clicker</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="js/app.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/app.js"></script>
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/simple-sidebar.css">
 </head>
@@ -15,13 +15,41 @@
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
         <li class="sidebar-brand">Cat Clicker</li>
+        <span id='cat-list'></span>
       </ul>
     </div>
     <div id="page-content-wrapper">
       <div class="container-fluid">
+        <div class='row'>
+          <div id="toggle" class="col-lg-12">
+            <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+          </div>
+        </div>
         <div class="row">
           <div id="main" class="col-lg-12">
-            <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+            <div class='cat' id='cat'>
+              <h1 id='cat-name'></h1>
+              <img id='cat-img' style='max-width: 100%' src=''>
+              <h2 id='cat-count'></h2>
+              <h3>Clicks</h3>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <a href="#admin-toggle" class="btn btn-default" id="admin-toggle">Admin</a>
+          </div>
+          <div class="col-md-9" style='display: none' id="admin-area">
+            <form>
+              <label for='admin-name'>Name:</label>
+              <input type="text" id='admin-name' name="admin-name" value=''><br>
+              <label for='admin-url'>URL:</label>
+              <input type="text" id='admin-url' name="admin-url" value=''><br>
+              <label for='admin-count'>Count:</label>
+              <input type="number" id='admin-count' name="admin-count" value=''><br>
+              <a href='#admin-cancel' class='btn btn-default' id='admin-cancel'>cancel</a>
+              <a href='#admin-submit' class='btn btn-default' id='admin-submit'>Submit</a>
+            </form>
           </div>
         </div>
       </div>
